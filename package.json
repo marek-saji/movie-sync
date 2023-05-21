@@ -1,0 +1,25 @@
+{
+  "name": "movie-sync",
+  "version": "1.0.0",
+  "description": "Sync watch state between different services.",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo 'No tests (yet?)' ; exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marek-saji/movie-sync.git"
+  },
+  "keywords": [
+    "mubi",
+    "trakt.tv",
+    "sync",
+    "movie"
+  ],
+  "author": "Marek Marek ‘saji’ Augustynowicz <marek.aug@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marek-saji/movie-sync/issues"
+  },
+  "homepage": "https://github.com/marek-saji/movie-sync#readme"
+}
