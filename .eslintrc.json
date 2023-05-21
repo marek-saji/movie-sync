@@ -1,0 +1,6 @@
+{
+  "extends": "@saji",
+  "rules": {
+    "import/extensions": "off"
+  }
+}
