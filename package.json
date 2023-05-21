@@ -29,5 +29,8 @@
   "homepage": "https://github.com/marek-saji/movie-sync#readme",
   "devDependencies": {
     "@saji/eslint-config": "^1.0.1"
+  },
+  "dependencies": {
+    "env-paths": "^3.0.0"
   }
 }

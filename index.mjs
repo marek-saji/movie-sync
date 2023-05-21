@@ -3,7 +3,7 @@
 // TODO Be more verbose about what’s going on
 
 import { mubiFetchViewLog } from './lib/mubi.mjs';
-import { traktAuth, traktSyncViewLog } from './lib/trakt.mjs';
+import { traktSyncViewLog } from './lib/trakt.mjs';
 import args, { printHelp } from './lib/args.mjs';
 
 // FIXME Make these types available in lib/{trakt,mubi}
@@ -48,11 +48,10 @@ if (args.help)
 // TODO --since
 const viewLog = await mubiFetchViewLog();
 
-// TODO Store token
-// TODO Refresh token
-const { access_token: traktToken } = await traktAuth();
-const success = await traktSyncViewLog(traktToken, viewLog);
+const success = await traktSyncViewLog(viewLog);
 if (!success)
 {
     process.exit(EX_SYNC_FAILED);
 }
+
+process.exit(EX_OK);
