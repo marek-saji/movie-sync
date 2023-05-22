@@ -4,7 +4,8 @@
 
 import { mubiFetchViewLog } from './lib/mubi.mjs';
 import { traktSyncViewLog } from './lib/trakt.mjs';
-import args, { printHelp } from './lib/args.mjs';
+import { configFileInit } from './lib/configFile.mjs';
+import args, { argsInit, printHelp } from './lib/args.mjs';
 
 // FIXME Make these types available in lib/{trakt,mubi}
 
@@ -38,6 +39,11 @@ const EX_OK = 0;
  * Synchronisation failed
  */
 const EX_SYNC_FAILED = 3;
+
+await Promise.all([
+    configFileInit(),
+    argsInit(),
+]);
 
 if (args.help)
 {
