@@ -2,5 +2,8 @@
   "extends": "@saji",
   "rules": {
     "import/extensions": "off"
-  }
+  },
+  "overrides": [
+    { "files": "*.mjs" }
+  ]
 }
