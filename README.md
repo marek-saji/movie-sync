@@ -16,8 +16,8 @@ of features is implemented.
 - v0.0.1
   - [x] Proof of concept: Mubi → trakt.tv
   - [x] Config file
-  - [ ] Introduce verbosity levels, hide requests by default
-  - [ ] Be more verbose about what’s going on
+  - [x] Introduce verbosity levels, hide requests by default
+  - [x] Be more verbose about what’s going on
   - [ ] Check if trakt.tv token is valid before using, refresh
   - [ ] `--since` (accept relative dates)
   - [ ] Paginate results

@@ -10,6 +10,7 @@ import { mubiFetchViewLog } from './lib/mubi.mjs';
 import { traktSyncViewLog } from './lib/trakt.mjs';
 import { configFileInit } from './lib/configFile.mjs';
 import args, { argsInit, printHelp } from './lib/args.mjs';
+import { printErr, printMsg } from './lib/log.mjs';
 
 // FIXME Make these types available in lib/{trakt,mubi}
 
@@ -55,6 +56,7 @@ try
     const success = await traktSyncViewLog(viewLog);
     if (!success)
     {
+        printErr('Failed to save view log on trakt.tv');
         process.exit(EX_SYNC_FAILED);
     }
 }
@@ -62,7 +64,7 @@ catch (error)
 {
     if (error instanceof AssertionError && !error.generatedMessage)
     {
-        process.stderr.write(`ERROR: ${error.message} Run with --help for more info.\n`);
+        printErr(error.message);
         process.exit(EX_USAGE);
     }
 }
