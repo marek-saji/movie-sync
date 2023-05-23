@@ -2,6 +2,10 @@
 
 // TODO Be more verbose about what’s going on
 
+import { AssertionError } from 'node:assert';
+
+import { EX_OK, EX_SYNC_FAILED, EX_USAGE } from './consts/exitCodes.mjs';
+
 import { mubiFetchViewLog } from './lib/mubi.mjs';
 import { traktSyncViewLog } from './lib/trakt.mjs';
 import { configFileInit } from './lib/configFile.mjs';
@@ -31,15 +35,6 @@ import args, { argsInit, printHelp } from './lib/args.mjs';
 
 /** @typedef {Array<ViewLogEntry>} ViewLog */
 
-/**
- * Normal exit
- */
-const EX_OK = 0;
-/**
- * Synchronisation failed
- */
-const EX_SYNC_FAILED = 3;
-
 await Promise.all([
     configFileInit(),
     argsInit(),
@@ -51,13 +46,25 @@ if (args.help)
     process.exit(EX_OK);
 }
 
-// TODO --since
-const viewLog = await mubiFetchViewLog();
-
-const success = await traktSyncViewLog(viewLog);
-if (!success)
+try
 {
-    process.exit(EX_SYNC_FAILED);
+    // TODO --since
+    /** @type {ViewLog} */
+    const viewLog = await mubiFetchViewLog();
+
+    const success = await traktSyncViewLog(viewLog);
+    if (!success)
+    {
+        process.exit(EX_SYNC_FAILED);
+    }
+}
+catch (error)
+{
+    if (error instanceof AssertionError && !error.generatedMessage)
+    {
+        process.stderr.write(`ERROR: ${error.message} Run with --help for more info.\n`);
+        process.exit(EX_USAGE);
+    }
 }
 
 process.exit(EX_OK);
