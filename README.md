@@ -30,3 +30,5 @@ of features is implemented.
   - [ ] First two–way sync: trakt.tv ↔ Letterboxd
   - [ ] tmdb
   - [ ] imdb
+- v1.1.0
+  - [ ] Sync ratings
