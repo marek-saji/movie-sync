@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// TODO Be more verbose about what’s going on
-
 import { AssertionError } from 'node:assert';
 
 import { EX_OK, EX_SYNC_FAILED, EX_USAGE } from './consts/exitCodes.mjs';
