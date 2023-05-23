@@ -18,7 +18,7 @@ of features is implemented.
   - [x] Config file
   - [x] Introduce verbosity levels, hide requests by default
   - [x] Be more verbose about what’s going on
-  - [ ] Check if trakt.tv token is valid before using, refresh
+  - [x] Check if trakt.tv token is valid before using, refresh
   - [ ] `--since` (accept relative dates)
   - [ ] Paginate results
 - v1.0.0
