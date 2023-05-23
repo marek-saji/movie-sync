@@ -13,12 +13,7 @@ Roadmap
 Warning: sub par code quality. Expect improvements only after basic set
 of features is implemented.
 
-- v0.0.1
-  - [x] Proof of concept: Mubi → trakt.tv
-  - [x] Config file
-  - [x] Introduce verbosity levels, hide requests by default
-  - [x] Be more verbose about what’s going on
-  - [x] Check if trakt.tv token is valid before using, refresh
+- v0.1.0
   - [ ] `--since` (accept relative dates)
   - [ ] Paginate results
 - v1.0.0
