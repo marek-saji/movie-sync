@@ -14,7 +14,7 @@ Warning: sub par code quality. Expect improvements only after basic set
 of features is implemented.
 
 - v0.0.1
-  - [x] Proof of concept
+  - [x] Proof of concept: Mubi → trakt.tv
   - [x] Config file
   - [ ] Introduce verbosity levels, hide requests by default
   - [ ] Be more verbose about what’s going on
@@ -25,3 +25,8 @@ of features is implemented.
   - [ ] Human–friendly error handing
   - [ ] Make `@typedef`s from `index.mjs` available in other files
   - [ ] Auto–detect `--mubi-country`
+  - [ ] Mubi → Letterboxd
+  - [ ] Netflix → trakt.tv
+  - [ ] First two–way sync: trakt.tv ↔ Letterboxd
+  - [ ] tmdb
+  - [ ] imdb
