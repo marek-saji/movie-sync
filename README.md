@@ -14,8 +14,8 @@ Warning: sub par code quality. Expect improvements only after basic set
 of features is implemented.
 
 - v0.1.0
-  - [ ] `--since` (accept relative dates)
-  - [ ] Paginate results
+  - [x] `--since` (accept relative dates)
+  - [x] Paginate results
 - v1.0.0
   - [ ] Human–friendly error handing
   - [ ] Make `@typedef`s from `index.mjs` available in other files

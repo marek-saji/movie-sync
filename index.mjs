@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-import { AssertionError } from 'node:assert';
+import assert, { AssertionError } from 'node:assert';
+
+import parseDate from '@nrk/simple-date-parse';
 
 import { EX_OK, EX_SYNC_FAILED, EX_USAGE } from './consts/exitCodes.mjs';
 
@@ -47,15 +49,22 @@ if (args.help)
 
 try
 {
-    // TODO --since
-    /** @type {ViewLog} */
-    const viewLog = await mubiFetchViewLog();
+    const now = new Date();
+    const since = parseDate(args.since, now);
+    assert.ok(!Number.isNaN(since), `Invalid since date: ${args.since}`);
+    assert.ok(since.toISOString() !== now.toISOString(), `Failed to parse since date: ${args.since}`);
 
-    const success = await traktSyncViewLog(viewLog);
-    if (!success)
+    /** @type {ViewLog} */
+    const viewLog = await mubiFetchViewLog({ since });
+
+    if (viewLog.length)
     {
-        printErr('Failed to save view log on trakt.tv');
-        process.exit(EX_SYNC_FAILED);
+        const success = await traktSyncViewLog(viewLog);
+        if (!success)
+        {
+            printErr('Failed to save view log on trakt.tv');
+            process.exit(EX_SYNC_FAILED);
+        }
     }
 }
 catch (error)
