@@ -12,29 +12,9 @@ import { configFileInit } from './lib/configFile.mjs';
 import args, { argsInit, printHelp } from './lib/args.mjs';
 import { printErr } from './lib/log.mjs';
 
-// FIXME Make these types available in lib/{trakt,mubi}
-
 /**
- * @typedef {object} MovieInService
- * @property {'mubi'|'trakt.tv'|'tmdb'|'imdb'} service
- * @property {string} id
- * @property {string} url
+ * @typedef {import('./types').ViewLog} ViewLog
  */
-
-/**
- * @typedef {object} Movie
- * @property {string} title
- * @property {number} year
- * @property {Array<MovieInService>} services
- */
-
-/**
- * @typedef {object} ViewLogEntry
- * @property {Date} time
- * @property {Movie} movie
- */
-
-/** @typedef {Array<ViewLogEntry>} ViewLog */
 
 await Promise.all([
     configFileInit(),

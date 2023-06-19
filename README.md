@@ -18,7 +18,7 @@ of features is implemented.
   - [x] Paginate results
 - v1.0.0
   - [ ] Human–friendly error handing
-  - [ ] Make `@typedef`s from `index.mjs` available in other files
+  - [x] Move types shared between files out of `index.mjs`
   - [ ] Auto–detect `--mubi-country`
   - [ ] Mubi → Letterboxd
   - [ ] Netflix → trakt.tv
