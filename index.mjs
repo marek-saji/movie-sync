@@ -10,6 +10,7 @@ import { mubiFetchViewLog } from './lib/mubi.mjs';
 import { traktSyncViewLog } from './lib/trakt.mjs';
 import { configFileInit } from './lib/configFile.mjs';
 import args, { argsInit, printHelp } from './lib/args.mjs';
+import config from './lib/config.mjs';
 import { printErr } from './lib/log.mjs';
 
 /**
@@ -30,9 +31,9 @@ if (args.help)
 try
 {
     const now = new Date();
-    const since = parseDate(args.since, now);
-    assert.ok(!Number.isNaN(since), `Invalid since date: ${args.since}`);
-    assert.ok(since.toISOString() !== now.toISOString(), `Failed to parse since date: ${args.since}`);
+    const since = parseDate(config.since, now);
+    assert.ok(!Number.isNaN(since), `Invalid since date: ${config.since}`);
+    assert.ok(since.toISOString() !== now.toISOString(), `Failed to parse since date: ${config.since}`);
 
     /** @type {ViewLog} */
     const viewLog = await mubiFetchViewLog({ since });
