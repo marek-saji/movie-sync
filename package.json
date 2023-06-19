@@ -5,7 +5,7 @@
   "main": "index.mjs",
   "scripts": {
     "dev": "node --watch index.mjs",
-    "test": "echo 'No tests (yet?)' ; exit 1"
+    "test": "echo 'No tests (yet?)' ; exit 0"
   },
   "bin": "./index.mjs",
   "engines": {
