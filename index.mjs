@@ -8,7 +8,7 @@ import { mubiFetchViewLog } from './lib/mubi.mjs';
 import { traktSyncViewLog } from './lib/trakt.mjs';
 import { configFileInit } from './lib/configFile.mjs';
 import args, { argsInit, printHelp } from './lib/args.mjs';
-import { printErr, printMsg } from './lib/log.mjs';
+import { printErr } from './lib/log.mjs';
 
 // FIXME Make these types available in lib/{trakt,mubi}
 
@@ -64,6 +64,10 @@ catch (error)
     {
         printErr(error.message);
         process.exit(EX_USAGE);
+    }
+    else
+    {
+        throw error;
     }
 }
 
