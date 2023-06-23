@@ -23,7 +23,7 @@ of features is implemented.
   - [ ] Auto–detect `--mubi-country`
   - [ ] Netflix → trakt.tv
   - [ ] Mubi → Letterboxd
-  - [ ] First two–way sync: trakt.tv ↔ Letterboxd
+  - [ ] First two–way sync: trakt.tv ↔︎ Letterboxd
   - [ ] tmdb
   - [ ] imdb
 - v1.1.0
