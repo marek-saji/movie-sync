@@ -21,6 +21,7 @@ of features is implemented.
   - [ ] Human–friendly error handing
   - [x] Move types shared between files out of `index.mjs`
   - [ ] Auto–detect `--mubi-country`
+  - [ ] Store tokens in keyring / keychain
   - [ ] Netflix → trakt.tv
   - [ ] Mubi → Letterboxd
   - [ ] First two–way sync: trakt.tv ↔︎ Letterboxd
