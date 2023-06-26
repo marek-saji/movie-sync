@@ -1,1 +1,1 @@
-export const APP_ID = '@saji/sync-movies';
+export const APP_ID = '@saji/movie-sync';
