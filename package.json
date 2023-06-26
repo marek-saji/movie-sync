@@ -1,6 +1,6 @@
 {
   "name": "@saji/movie-sync",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Sync watch state between different services.",
   "main": "index.mjs",
   "scripts": {
