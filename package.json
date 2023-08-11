@@ -32,6 +32,8 @@
   },
   "dependencies": {
     "@nrk/simple-date-parse": "^1.0.3",
-    "env-paths": "^3.0.0"
+    "env-paths": "^3.0.0",
+    "hyperlinker": "^1.0.0",
+    "supports-hyperlinks": "^3.0.0"
   }
 }
