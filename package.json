@@ -34,6 +34,7 @@
     "@nrk/simple-date-parse": "^1.0.3",
     "env-paths": "^3.0.0",
     "hyperlinker": "^1.0.0",
+    "strip-ansi": "^7.1.0",
     "supports-hyperlinks": "^3.0.0"
   }
 }
