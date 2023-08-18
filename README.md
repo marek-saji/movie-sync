@@ -7,25 +7,13 @@ Sync watch state between different services.
 npx @saji/movie-sync --help
 ```
 
-Roadmap
--------
 
-Warning: sub par code quality. Expect improvements only after basic set
-of features is implemented.
+Supported services
+------------------
 
-- v0.1.0
-  - [x] Mubi → trakt.tv
-  - [x] `--since` (accept relative dates)
-  - [x] Paginate results
-- v1.0.0
-  - [ ] Human–friendly error handing
-  - [x] Move types shared between files out of `index.mjs`
-  - [ ] Auto–detect `--mubi-country`
-  - [ ] Store tokens in keyring / keychain
-  - [ ] Netflix → trakt.tv
-  - [ ] Mubi → Letterboxd
-  - [ ] First two–way sync: trakt.tv ↔︎ Letterboxd
-  - [ ] tmdb
-  - [ ] imdb
-- v1.1.0
-  - [ ] Sync ratings
+- [x] Mubi
+- [x] Trakt
+- [ ] Netflix
+- [ ] tmdb (https://github.com/marek-saji/movie-sync/issues/4, https://github.com/marek-saji/movie-sync/issues/5)
+- [ ] imdb (https://github.com/marek-saji/movie-sync/issues/6)
+- [ ] Letterboxd (https://github.com/marek-saji/movie-sync/issues/7)
