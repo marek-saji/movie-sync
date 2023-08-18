@@ -43,7 +43,7 @@ try
         const success = await traktSyncViewLog(viewLog);
         if (!success)
         {
-            printErr('Failed to save view log on trakt.tv');
+            printErr('Failed to save view log on Trakt');
             process.exit(EX_SYNC_FAILED);
         }
     }

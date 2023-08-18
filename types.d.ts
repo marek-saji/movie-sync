@@ -1,4 +1,4 @@
-export type Service = 'mubi' | 'trakt.tv' | 'tmdb' | 'imdb'
+export type Service = 'mubi' | 'trakt' | 'tmdb' | 'imdb'
 
 export interface MovieInService
 {
